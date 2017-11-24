@@ -1,3 +1,5 @@
+//Aggiornato il 24/11
+
 const int trig_pin = 9;
 const int echo_pin = 10;
 
