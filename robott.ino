@@ -7,14 +7,6 @@ void setup() {
   Serial.begin(9600);
 }
 
-//echo rimane in HIGH per tutto il tempo di durata del viaggio delle onde
-//v=343 m/s -> v=0,0343 cm/micros
-//s[cm]=0,0343 [cm/micros] * t [micros] * 1/2
-long calcola_distanza(t){
-  long s = (0.0343)*(t)*(0.5);
-  return s;
-}
-
 void loop() {
   digitalWrite(trig_pin, LOW);
   delay(10);
@@ -24,9 +16,11 @@ void loop() {
   digitalWrite(trig_pin, LOW);
     
   //OSS:oltre i 20cm il sensore risulta poco preciso allora pongo come tempo limite 1200 microsecondi, iin modo che più o meno oltre i 20 cm risulti fuori portata e non valori poco precisi
-  
+  //echo rimane in HIGH per tutto il tempo di durata del viaggio delle onde
+  //v=343 m/s -> v=0,0343 cm/micros
+  //s[cm]=0,0343 [cm/micros] * t [micros] * 1/2
   long t = pulseIn(echo_pin, HIGH, 50000);
-  long s = calcola_distanza(t);
+  long s = (0.0343)*(t)*(0.5);
   Serial.print(s);
   if(t==0){
     Serial.println("Fuori portata");
