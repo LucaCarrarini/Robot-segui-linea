@@ -107,7 +107,7 @@ void inizializza_motori(){
 void inizializza_pin(){
   pinMode(mot1_dx, OUTPUT);
   pinMode(mot2_dx, OUTPUT);
-  pinMode(mot1_Sx, OUTPUT);
+  pinMode(mot1_sx, OUTPUT);
   pinMode(mot1_dx, OUTPUT);
   pinMode(echo, OUTPUT);
   pinMode(trig, INPUT);
