@@ -109,10 +109,10 @@ void inizializza_pin(){
   pinMode(mot2_dx, OUTPUT);
   pinMode(mot1_Sx, OUTPUT);
   pinMode(mot1_dx, OUTPUT);
-  pinMode();
-  pinMode();
-  pinMode();
-  pinMode();
+  pinMode(echo, OUTPUT);
+  pinMode(trig, INPUT);
+  pinMode(led_r, OUTPUT);
+  pinMode(led_v, OUTPUT);
   pinMode(13, OUTPUT);//led del pin 13 per comunicare se c'è un ostacolo
   pinMode(button, INPUT_PULLUP);
 }
