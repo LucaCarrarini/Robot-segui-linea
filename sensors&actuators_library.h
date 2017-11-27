@@ -1,8 +1,9 @@
 #include <Arduino.h>
+//Pin analogici
 #define luce_dx A0  //pin lettura sensore di luminosità destro
-#define luce_sx A1  //                                  sinistro
+#define luce_sx A1  //pin lettura sensore di luminosità sinistro
 #define battery A2  //pin monitoraggio livello carica della batteria
-
+//Pin digitali
 #define mot1_dx 3   //pin pilotaggio motore destro
 #define mot2_dx 11  //
 #define mot1_sx 9   //pin pilotaggio motore sinistro
@@ -103,7 +104,6 @@ void inizializza_motori(){
   digitalWrite(mot2_sx, HIGH);
 }  
 
-//FAI PINMODE
 void inizializza_pin(){
   pinMode(mot1_dx, OUTPUT);
   pinMode(mot2_dx, OUTPUT);
