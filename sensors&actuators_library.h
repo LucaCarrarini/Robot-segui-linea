@@ -81,6 +81,16 @@ void indietro_sx(){
   digitalWrite(mot2_sx, HIGH);
 }
 
+void gira_dx(){
+  avanti_dx();
+  indietro_sx();
+}
+
+void gira_sx(){
+  avanti_sx();
+  indietro_dx();
+}
+
 void accendi_led_r(){
   digitalWrite(led_r, HIGH);
 }
